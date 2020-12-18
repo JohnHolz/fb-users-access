@@ -1,7 +1,7 @@
 import requests 
 
 ### Pages and page_permissions
-def pages(api,business_id,some_value):
+def pages(token,api,business_id,some_value):
     url = "https://graph.facebook.com/{api}/{some_value}/assigned_users?business={business_id}".format(api=api,business_id = business_id,some_value = some_value)
     payload={}
     headers = {'Authorization': 'Bearer {}'.format(token)}
